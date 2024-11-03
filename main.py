@@ -62,6 +62,7 @@ def main():
 
                         if cor_jogador != sequence[index]:
                             mostra_erro()
+                            pygame.time.delay(1000)
                             if 'num_errors' not in locals():
                                 num_errors = 0
                             num_errors += 1
@@ -73,12 +74,13 @@ def main():
                             break
 
                         if len(player_sequence) == len(sequence):
+                            pygame.time.delay(1000)
                             if len(sequence) < 5:
-                                score += 90
+                                score += 1000
                             elif len(sequence) >= 5 and len(sequence) < 10:
-                                score += 160 + round_number
+                                score += 1600 + round_number
                             else:
-                                score += 250 + round_number * 2
+                                score += 2500 + round_number * 2
                                 
                             player_turn = False
                             round_number += 1
@@ -89,7 +91,6 @@ def main():
                             round_number = 1
             
                         tela_jogo(score, round_number)
-                        pygame.time.delay(1000)
 
 if __name__ == "__main__":
     main()
