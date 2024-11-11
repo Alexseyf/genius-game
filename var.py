@@ -2,7 +2,6 @@ import pygame
 
 pygame.init()
 
-
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 GRAY = (200, 200, 200)
@@ -10,9 +9,6 @@ GRAY = (200, 200, 200)
 WIDTH = 900
 HEIGHT = 600
 SIDE_PANEL_WIDTH = 300
-
-score = 0
-round_number = 1
 
 genius_board = pygame.image.load('imgs/genius.png')
 genius_blue = pygame.image.load('imgs/genius_blue.png')

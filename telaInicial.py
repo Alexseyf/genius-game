@@ -5,9 +5,6 @@ pygame.init()
 
 def tela_inicial():
     pygame.mouse.set_visible(True)
-    pygame.mixer.music.load('music/background_music.mp3')
-    pygame.mixer.music.play(-1)
-    pygame.mixer.music.play()
     background = pygame.image.load('imgs/main_background.png')
     background = pygame.transform.scale(background, (var.WIDTH, var.HEIGHT))
     var.screen.blit(background, (0, 0))

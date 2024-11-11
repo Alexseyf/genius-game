@@ -1,7 +1,12 @@
 from imports import *
  
 def main():
-    global score, round_number
+    
+    pygame.mixer.music.load('music/background_music.mp3')
+    pygame.mixer.music.set_volume(0.5)
+    pygame.mixer.music.play(-1)
+    pygame.mixer.music.play()
+    
     score = 0
     round_number = 1
     sequence = []
@@ -19,6 +24,9 @@ def main():
                 if var.score_button.collidepoint(x, y):
                     mostra_score()
                 if var.start_button.collidepoint(x, y):
+                    start_game_sound = pygame.mixer.Sound('sound/start_game.mp3')
+                    start_game_sound.set_volume(0.5)
+                    start_game_sound.play()
                     pygame.time.delay(500)
                     start_game = True
                     
